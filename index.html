@@ -10,41 +10,54 @@
 <body>
     <header id="header">
         <div id="header-img-container">
-            <img src="img/nintendo_switch_logo.png">
+            <img id="header-img" src="img/nintendo_switch_logo.png">
         </div>
 
         <nav id="nav-bar">
             <div class="nav-a-container">
-                <a class="nav-link" href="">Product Video</a>
+                <a class="nav-link" href="#video-container">Product Video</a>
             </div>
             <div class="nav-a-container">
-                <a class="nav-link" href="">Products</a>
+                <a class="nav-link" href="#products-container">Products</a>
             </div>
             <div class="nav-a-container">
-                <a class="nav-link" href="">Contact Us</a>
+                <a class="nav-link" href="#form-container">Contact Us</a>
             </div>
         </nav>
     </header>
 
     <main>
         <div id="video-container">
-            <iframe src="https://www.youtube.com/embed/N4fltJMp1f4" frameborder="0" allowfullscreen></iframe>
+            <div id="iframe-wrapper">
+                <iframe id="video" src="https://www.youtube.com/embed/N4fltJMp1f4" frameborder="0" allowfullscreen></iframe>
+            </div>
             <p>Video taken from Nintendo's YouTube</p>
         </div>
 
         <div id="products-container">
-            <div id="product">
-                Switch
+            <div class="product">
+                <h2>Nintendo Switch</h2>
+                <img  id="switch" src="img/nintendo_switch.png">
+                <p>At home and on the go</p>
+                <p>Removable Joy-Cons</p>
+                <p>Hours of fun</p>
             </div>
-            <div id="product">
-                Switch Lite
+            <div class="product">
+                <h2>Nintendo Switch Lite</h2>
+                <img src="img/nintendo_switch_lite.png">
+                <p>Dedicated to handheld</p>
+                <p>Compact on the go package</p>
+                <p>Hours of fun</p>
             </div>
         </div>
-
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <input id="email" type="email" placeholder="Enter email">
-            <button id="submit" type="submit">Submit</button>
-        </form>
+        
+        <div id="form-container">
+            <p>Sign up for our newsletter and get updates, promotions, and more!</p>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input name="email" id="email" type="email" placeholder="Enter email" required>
+                <input id="submit" type="submit" value="Enter Email" class="btn"></button>
+            </form>
+        </div>
     </main>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

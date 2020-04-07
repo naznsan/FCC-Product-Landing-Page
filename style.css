@@ -23,7 +23,7 @@ ol, ul {
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(
         180deg,
@@ -44,6 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     position: fixed;
+    z-index: 999;
 }
 
 #header-img-container {
@@ -84,7 +85,6 @@ main {
 }
 
 #video-container {
-    background-color: yellow;
     margin-top: 40px;
     width: 80%;
     display: flex;
@@ -92,11 +92,70 @@ main {
     align-items: center;
 }
 
+#iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
 iframe {
-    max-width: 100%;
-    min-width: 80%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 div#video-container p {
     align-self: flex-end;
+    font-size: 0.75em;
+}
+
+#products-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.product {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 3px;
+    border: grey solid 1px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px grey;
+}
+
+.product h2 {
+    font-weight: 900;
+}
+
+.product img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.product p {
+    margin: 15px 0;
+}
+
+#form-container {
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-container p {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 550px) {
+    
 }
